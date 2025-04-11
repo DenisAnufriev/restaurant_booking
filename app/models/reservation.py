@@ -1,6 +1,8 @@
 from sqlalchemy import Column, Integer, String, DateTime, ForeignKey
 from sqlalchemy.orm import relationship
+
 from app.db.session import Base
+
 
 class Reservation(Base):
     __tablename__ = "reservations"
