@@ -16,6 +16,7 @@ class ReservationCreate(ReservationBase):
 
 class ReservationRead(ReservationBase):
     id: int
+    table_location: str
 
     class Config:
         from_attributes = True

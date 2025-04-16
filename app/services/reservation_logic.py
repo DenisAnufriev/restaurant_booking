@@ -15,7 +15,7 @@ def is_slot_available(
         .filter(
             Reservation.table_id == table_id,
             Reservation.reservation_time < end_time,
-            (Reservation.reservation_time + text(f"INTERVAL '{duration_minutes} minutes'")) > reservation_time,
+            Reservation.reservation_time + timedelta(minutes=duration_minutes) > reservation_time,
         )
         .first()
     )
