@@ -12,5 +12,6 @@ class Reservation(Base):
     table_id = Column(Integer, ForeignKey("tables.id"), nullable=False)
     reservation_time = Column(DateTime, nullable=False)
     duration_minutes = Column(Integer, nullable=False)
+    end_time = Column(DateTime, nullable=False)
 
     table = relationship("Table")
